@@ -1,0 +1,68 @@
+.container {
+    margin-bottom: 2rem;
+  }
+  
+  .scrollContainer {
+    overflow-x: auto; /* Enable horizontal scrolling */
+    white-space: nowrap;
+  }
+  
+  .propertyCards {
+    display: flex;
+  }
+
+  .property-list-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .list-view .property-list-container {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .list-view .property-card {
+    width: 300px; /* Adjust width as needed */
+    margin: 10px; /* Adjust margin as needed */
+    border: 1px solid #ccc; 
+    border-radius: 5px;
+    padding: 10px;
+    background-color: #f9f9f9
+  }
+  
+  .property-card {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 15px;
+    margin-bottom: 10px;
+    cursor: pointer; /* Add hover effect for better UX */
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .property-card:hover {
+    transform: scale(1.02); /* Slight zoom on hover */
+  }
+  
+  .property-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-bottom: 10px;
+  }
+  
+  .property-card h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+  }
+  
+  .property-card p {
+    margin-bottom: 10px;
+  }
+  
+  .view-details-button {
+    background-color: #007bff;}

@@ -1,0 +1,25 @@
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+  }
+  
+  .footer-container ul {
+    list-style: none;
+    padding: 0;
+  }
+  
+  .footer-container ul li {
+    margin-bottom: 5px;
+  }
+  
+  .footer-container a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  .social-media a {
+    margin-right: 10px;
+  }
+  
+  /* Add more CSS styles to customize the footer's appearance */

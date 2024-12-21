@@ -1,11 +1,16 @@
 import React from 'react';
-import HomePage from './HomePage'; // Assuming HomePage.js is created
+import { BrowserRouter, Routes, Route } from 'react-router-dom'; 
+import HomePage from './HomePage';
+import ListYourProperty from './ListYourProperty'; 
 
 function App() {
   return (
-    <div className="App">
-      <HomePage />
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<HomePage />} />
+        <Route path="/list-your-property" element={<ListYourProperty />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 

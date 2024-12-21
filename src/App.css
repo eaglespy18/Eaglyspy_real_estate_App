@@ -1,20 +1,16 @@
 .App {
   text-align: center;
+  background-image: url( "C:\Users\USER\real-estate-app\my-real-estate-app\public\background image.jpg" ); 
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  font-family: sans-serif;
+  color: #e5dada; 
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
 
 .App-header {
-  background-color: #282c34;
+  background-color: rgba(0, 0, 0, 0.7); /* Semi-transparent overlay */
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -28,11 +24,13 @@
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.cta-button {
+  background-color: #007bff; /* Blue color */
+  color: #fff;
+  border: none;
+  padding: 15px 30px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
 }

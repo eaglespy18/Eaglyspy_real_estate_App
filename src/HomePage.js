@@ -1,52 +1,44 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import Header from './Header';
 import HeroSection from './HeroSection';
 import PropertyList from './PropertyList';
 import Footer from './Footer';
+import PropertyTypes from './PropertyTypes';
+import CtaButton from './CtaButton';
 
 const HomePage = () => {
   const featuredProperties = [
-    {
-      id: 1,
-      title: "Modern Apartment",
-      description: "Spacious and stylish apartment in the city center.",
-      imageUrl: "https://example.com/images/apartment.jpg",
-      price: 1500,
-    },
-    {
-      id: 2,
-      title: "Cozy Cottage",
-      description: "Charming cottage in a quiet neighborhood.",
-      imageUrl: "https://example.com/images/cottage.jpg",
-      price: 1000,
-    },
-    // Add more featured properties here
+    // ... your featured properties data
   ];
 
   const recentListings = [
-    {
-      id: 3,
-      title: "Luxury Villa",
-      description: "Luxurious villa with stunning ocean views.",
-      imageUrl: "https://example.com/images/villa.jpg",
-      price: 5000,
-    },
-    {
-      id: 4,
-      title: "Family Home",
-      description: "Spacious family home in a great school district.",
-      imageUrl: "https://example.com/images/family-home.jpg",
-      price: 2500,
-    },
-    // Add more recent listings here
+    // ... your recent listings data
   ];
+
+  const [selectedCategory, setSelectedCategory] = useState(null);
+
+  const handleCategorySelect = (category) => {
+    setSelectedCategory(category);
+  };
+
+  const navigate = useNavigate(); 
+
+  const handleListPropertyClick = () => {
+    navigate('/list-your-property');
+  };
 
   return (
     <div>
       <Header />
       <HeroSection />
-      <PropertyList properties={featuredProperties} title="Featured Properties" />
-      <PropertyList properties={recentListings} title="Recent Listings" />
+      <PropertyTypes 
+        propertyTypes={['Apartment', 'Villa', 'House', 'Condo', 'Townhouse', 'Commercial Space', 'Land']} 
+        onCategorySelect={handleCategorySelect} 
+      />
+      <PropertyList properties={featuredProperties} title="Featured Properties" selectedCategory={selectedCategory} />
+      <PropertyList properties={recentListings} title="Recent Listings" selectedCategory={selectedCategory} />
+      <CtaButton text="List Your Property" onClick={handleListPropertyClick} />
       <Footer />
     </div>
   );

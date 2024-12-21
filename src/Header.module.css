@@ -1,0 +1,45 @@
+.header {
+    background-color: #fff; /* Light background */
+    padding: 1rem;
+    display: flex;
+    justify-content: flex-end; /* Align items to the right */
+    align-items: center;
+    position: sticky; /* Keep header fixed on scroll */
+    top: 0;
+    z-index: 1; /* Ensure header is on top of other content */
+  }
+  
+  /* ... rest of your styles ... */
+  
+
+  
+  .searchContainer {
+    display: flex;
+    align-items: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 0.5rem;
+  }
+  
+  .searchInput {
+    border: none;
+    outline: none;
+    padding: 0.5rem;
+    font-size: 1rem;
+    flex-grow: 1; /* Allow search input to take up available space */
+  }
+  
+  .profile {
+    display: flex;
+    align-items: center;
+  }
+  
+  .profileButton {
+    background-color: #007bff; /* Blue button */
+    color: #fff;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  

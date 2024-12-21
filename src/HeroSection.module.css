@@ -1,0 +1,26 @@
+.hero {
+    background-color: #f0f0f0; /* Light background color */
+    padding: 5rem 0; 
+    text-align: center;
+    color: #333; /* Text color */
+  }
+  
+  .hero h1 {
+    font-size: 3rem; /* Adjust font size as needed */
+    margin-bottom: 1rem;
+  }
+  
+  .hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .hero button {
+    background-color: #007bff; /* Blue button */
+    color: #fff;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1rem;
+  }
